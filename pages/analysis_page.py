@@ -10,7 +10,7 @@ st.subheader('REVIEWS')
 
 st.image(st.session_state.poster)
 st.write(st.session_state.movie_name)
-positive_review_negative_review,fdist,word_count,positive_words_count,negative_words_count,review_results=st.session_state.movie_sent
+positive_review,negative_review,fdist,word_count,positive_words_count,negative_words_count,review_results=st.session_state.movie_sent
 
 sid=SentimentIntensityAnalyzer()
 
