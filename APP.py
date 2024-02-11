@@ -84,7 +84,7 @@ def movie_sentiments(movie_name):
     review_result = get_imdb_reviews(movie_id)
     all_reviews = ' '.join(review_result)
     sid = SentimentIntensityAnalyzer()
-    #polarity_scores=sid.polarity_scores(all_reviews)
+    polarity_scores=sid.polarity_scores(all_reviews)
     review_without_punctuation = all_reviews.translate(str.maketrans("", "", string.punctuation))
     words = word_tokenize(review_without_punctuation)
     no_stop_words = [word for word in words if word.lower() not in stop_words]
@@ -110,7 +110,7 @@ def movie_sentiments(movie_name):
     total_words = len(tokenized_words)
 
 
-    return positive_review,negative_review,fdist,total_words,positive_words_count,negative_words_count,review_result
+    return polarity_scores,positive_review,negative_review,fdist,total_words,positive_words_count,negative_words_count,review_result
 
 def sentiment_analysis_page():
     st.write('this is the page')
