@@ -82,7 +82,7 @@ def get_imdb_reviews(movie_id,number_of_reviews=25):
 def movie_sentiments(movie_name):
     movie_id = get_imdb_id(movie_name)
     review_result = get_imdb_reviews(movie_id)
-    #all_reviews = ' '.join(review_result)
+    all_reviews = ' '.join(review_result)
     sid = SentimentIntensityAnalyzer()
     #polarity_scores=sid.polarity_scores(all_reviews)
     review_without_punctuation = all_reviews.translate(str.maketrans("", "", string.punctuation))
