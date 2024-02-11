@@ -18,3 +18,4 @@
 4. play around.
 
 # launch app directly: https://movierecommendersentimentanalyzer.streamlit.app
+(clicl on a movie's analyze button first to load a movie to session state,going to analyze page directly throws an error)
