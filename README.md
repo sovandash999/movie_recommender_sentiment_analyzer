@@ -16,3 +16,5 @@
 3. run the app using 'streamlit run APP.py' command
 
 4. play around.
+
+# launch app directly: https://movierecommendersentimentanalyzer.streamlit.app
