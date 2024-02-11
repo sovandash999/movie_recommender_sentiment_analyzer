@@ -1,6 +1,6 @@
 # movies_recommender_with_sentiment_analysis
 
-1. This is an content based moivies recommender app which calculates the similarty of movies based on euclidean distances.
+1. This is an content based moivies recommender app which calculates the similarty of movies based on cosine similarity.
 
 2. I have leveraged the methods of web scrapping to fetch the top 100 reviews of any selected movie and used NLTK library for sentiment analysis. 
 
