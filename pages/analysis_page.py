@@ -10,7 +10,7 @@ st.subheader('REVIEWS')
 
 st.image(st.session_state.poster)
 st.write(st.session_state.movie_name)
-polarity_scores,fdist,word_count,positive_words_count,negative_words_count,review_results=st.session_state.movie_sent
+positive_review_negative_review,fdist,word_count,positive_words_count,negative_words_count,review_results=st.session_state.movie_sent
 
 sid=SentimentIntensityAnalyzer()
 
@@ -42,13 +42,13 @@ labels1=['positive word count','negative word count','neutral word count']
 sizes1=[positive_words_count,negative_words_count,negative_words_count]
 with col1:
     fig1,ax1=plt.subplots()
-    ax1.pie(sizes1,labels=labels1,autopct='%1.1f%%',shadow=True)
+    ax1.pie(sizes1,labels=labels1,autopct='%1.1f%%')
     ax1.axis('equal')
     ax1.set_title('word count')
     st.pyplot(fig1)
 
-labels=['positive reviews','negative reviews','neutral reviews']
-sizes=[polarity_scores['pos']*100,polarity_scores['neg']*100,polarity_scores['neu']*100]
+labels=['positive reviews','negative reviews']
+sizes=[positive_review,negative_review]
 with col2:
     fig,ax=plt.subplots()
     ax.pie(sizes,labels=labels,autopct='%1.1f%%')
